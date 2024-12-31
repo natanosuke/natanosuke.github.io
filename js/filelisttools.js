@@ -5,5 +5,10 @@ const articles = [
         date: "December 29, 2024",
         link: "../tools/tool1.html"
     },
-
+    {
+    title: "楽天証券",
+    subtitle: "手数料が安く特典豊富！楽天ポイントを活用できたり初心者に優しい証券会社",
+    date: "December 31, 2024",
+    link: "../tools/tool2.html"
+    },
 ];
