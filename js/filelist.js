@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "IonQは三尊天井？私はもう助からない？",
+        subtitle: "今後どうなるかを予想してみた！",
+        date: "january 1, 2025",
+        link: "../posts/post3.html"
+    },
+    {
         title: "サンタクロースラリーとは？",
         subtitle: "年末年始の株式市場アノマリーを徹底解説",
         date: "december 30, 2024",
