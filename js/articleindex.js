@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("#articles-container");
 
-    // 最新6つの記事を取得
-    const latestArticles = articles.slice(-3); // 最新順に6つ取得
+    // 最新3つの記事を取得
+    const latestArticles = articles.reverse().slice(-6).reverse(); // 最新3つを取得し、正しい順序に並べる
 
     // 記事をHTMLに変換
     const articlesHTML = latestArticles.map(article => `
