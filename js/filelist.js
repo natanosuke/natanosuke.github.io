@@ -23,5 +23,4 @@ const articles = [
         date: "december 29, 2024",
         link: "../posts/post1.html"
     },
-
 ];
