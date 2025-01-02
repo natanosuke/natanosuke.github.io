@@ -1,6 +1,6 @@
 const articles = [
     {
-        title: "IonQは三尊天井？私はもう助からない？",
+        title: "Sofiは三尊天井？私はもう助からない？",
         subtitle: "今後どうなるかを予想してみた！",
         date: "january 1, 2025",
         link: "../posts/post3.html"
