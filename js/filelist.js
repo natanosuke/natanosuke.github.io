@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "今週の日米経済指標！",
+        subtitle: "今週はどうなる？",
+        date: "january 2, 2025",
+        link: "../posts/post4.html"
+    },
+    {
         title: "Sofiは三尊天井？私はもう助からない？",
         subtitle: "今後どうなるかを予想してみた！",
         date: "january 1, 2025",
