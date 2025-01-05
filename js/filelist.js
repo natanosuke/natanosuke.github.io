@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（01/06～01/12）の日米経済指標！",
+        subtitle: "2025年相場のはじまり！",
+        date: "january 6, 2025",
+        link: "../posts/post6.html"
+    },
+    {
         title: "M&A総研HDを分析してみた！",
         subtitle: "反転上昇の兆し？",
         date: "january 5, 2025",
