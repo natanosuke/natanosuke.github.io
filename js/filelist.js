@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "M&A総研HDを分析してみた！",
+        subtitle: "反転上昇の兆し？",
+        date: "january 5, 2025",
+        link: "../posts/post5.html"
+    },
+    {
         title: "今週の日米経済指標！",
         subtitle: "今週はどうなる？",
         date: "january 2, 2025",
