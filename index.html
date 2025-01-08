@@ -38,7 +38,7 @@
         </nav>
         <!-- Page Header-->
         <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
-            <div class="container position-relative px-4 px-lg-6">
+            <div class="container position-relative px-4 px-lg-7">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
@@ -51,13 +51,23 @@
         </header>
 <!-- Main Content-->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <!-- 記事リスト -->
+    <div class="row justify-content-center">
+        <!-- メインコンテンツ -->
+        <div class="col-lg-8 col-md-10">
+            <!-- 記事リストがここに表示される -->
             <div id="articles-container"></div>
-            
+
             <!-- ページャーボタン -->
             <a class="btn btn-primary float-left" href="post.html">View All Posts</a>
+        </div>
+        <!-- サイドバー -->
+        <div class="col-lg-3 col-md-4">
+            <div class="sidebar bg-light p-3">
+                <h5 class="sidebar-heading">月別アーカイブ</h5>
+                <ul class="list-unstyled" id="archive-list">
+                    <!-- JavaScriptで動的にリストを生成 -->
+                </ul>
+            </div>
         </div>
     </div>
 </div>

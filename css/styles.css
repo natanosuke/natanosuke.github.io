@@ -10824,3 +10824,34 @@ header.masthead .post-heading .meta a {
   color: white;
   pointer-events: none; /* 現在のページ番号はクリック不可 */
 }
+.sidebar {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: sticky; /* スクロール時に固定 */
+  top: 20px;
+  right: 0;
+}
+.sidebar-heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.sidebar ul {
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+.sidebar ul li a:hover {
+  color: #0056b3;
+}
+.d-none {
+  display: none;
+}
