@@ -1,0 +1,10 @@
+diff a/js/filelist.js b/js/filelist.js	(rejected hunks)
+@@ -2,7 +2,7 @@
+     {
+         title: "日経平均４万円突破！このまま上昇？",
+         subtitle: "日経平均株に関する考察をしてみました！",
+-        date: "january 7, 2025",
++        date: "2025-1-7",
+         link: "../posts/post7.html"
+     },
+     {

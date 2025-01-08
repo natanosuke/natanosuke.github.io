@@ -2,7 +2,7 @@ const articles = [
     {
         title: "日経平均４万円突破！このまま上昇？",
         subtitle: "日経平均株に関する考察をしてみました！",
-        date: "2025-1-7",
+        date: "january 7, 2025",
         link: "../posts/post7.html"
     },
     {
