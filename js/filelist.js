@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "保有中のIonQで爆損！",
+        subtitle: "ChatGptにいろいろ聞いてみた",
+        date: "january 9, 2025",
+        link: "../posts/post8.html"
+    },
+    {
         title: "日経平均４万円突破！このまま上昇？",
         subtitle: "日経平均株に関する考察をしてみました！",
         date: "january 7, 2025",
