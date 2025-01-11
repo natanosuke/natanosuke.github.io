@@ -25,6 +25,20 @@
                 transform-origin: left; /* 縮小の中心を設定 */
                 margin-top: -220px;
             }
+            .black-button {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #ffffff; /* 文字の色を白に設定 */
+                background-color: #000000; /* 背景色を黒に設定 */
+                text-align: center;
+                text-decoration: none; /* テキストの下線を除去 */
+                border-radius: 50px; /* 楕円形にするための角丸設定 */
+                font-weight: bold; /* 文字を太字に設定 */
+                transition: background-color 0.3s ease; /* ホバー時の背景色変更にスムーズな移行を追加 */
+             }
+             .black-button:hover {
+             background-color: #333333; /* ホバー時に背景色を少し明るい黒に変更 */
+             }
         </style>
                 <!-- Google ads-->
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3828774601557297"
@@ -67,8 +81,26 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <a class="section-heading" href="https://www.rakuten-sec.co.jp/"target="_blank">
-                楽天証券</a><a>とは！手数料が安く特典豊富！楽天ポイント活用で初心者に優しい証券会社</a>
+            <h2 class="section-heading">楽天証券とは！</h2><a>手数料が安く特典豊富！楽天ポイント活用で初心者に優しい証券会社</a>
+                <hr>
+                <a>PR用</a>
+                <div class="row justify-content-center">
+                    <div class="wp-block-st-blocks-my-button st-mybtn st-btn-default st-mybtn-noborder" style="border-width:0px;border-radius:60px;font-weight:bold;box-shadow:none">
+                        <a href="https://www.rakuten-sec.co.jp/" class="black-button">手数料が安く特典豊富！楽天証券</a>
+                    </div>     
+                </div>
+                <p>
+                    <script>
+                      // 特定の条件を満たすリンクだけ target="_blank" を設定
+                      document.querySelectorAll('div a').forEach(link => {
+                        // 特定のURLやクラス名でフィルタリング
+                        if (link.href.includes('px.a8.net') || link.href.includes('tradingview.com')) {
+                          link.setAttribute('target', '_blank');
+                        }
+                      });
+                    </script>
+                </p>
+                <hr>
             <p>投資を成功に導くためには、市場を深く理解し、タイミングを見極める力が必要です。
                 そんな中、多くの投資家から支持されている証券会社が「楽天証券」です。
                 この記事では、楽天証券の基本情報や魅力的な特典、使い方まで、初心者でも安心して始められるように徹底解説します。</p>
@@ -191,6 +223,11 @@
                     </span>
                 </a>
             </li>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <li class="list-inline-item">
+                    <a href="../privacypolicy.html" rel="noopener noreferrer">プライバシーポリシー</a>
+                </li>
+                </div>
           </ul>
           <div class="small text-center text-muted fst-italic">Copyright &copy; なたり資産倍増計画 2024</div>
         </div>
