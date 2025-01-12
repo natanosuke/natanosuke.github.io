@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "マネックス証券",
+        subtitle: "銘柄スカウターで簡単分析！投資力診断でスキル向上！優れたツールが揃う証券会社",
+        date: "january 12, 2025",
+        link: "../tools/tool4.html"
+        },
+    {
         title: "松井証券",
         subtitle: "手数料の安さと初心者向けサポートが充実した信頼の証券会社",
         date: "january 12, 2025",
