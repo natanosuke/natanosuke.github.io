@@ -114,23 +114,17 @@
                         </div>
                     </div>
                     <hr>
-                            <!-- JavaScript -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelectorAll('.external-link').forEach(function (link) {
-                    link.addEventListener('click', function (event) {
-                        event.preventDefault();
-                        window.open(this.href, '_blank');
-                    });
-                });
-            });
-        </script>
-        <script>
-            // 全てのリンクを取得して target="_blank" を設定
-            document.querySelectorAll('div a').forEach(link => {
-              link.setAttribute('target', '_blank');
-            });
-          </script>
+                    <p>
+                        <script>
+                          // 特定の条件を満たすリンクだけ target="_blank" を設定
+                          document.querySelectorAll('div a').forEach(link => {
+                            // 特定のURLやクラス名でフィルタリング
+                            if (link.href.includes('px.a8.net') || link.href.includes('tradingview.com')) {
+                              link.setAttribute('target', '_blank');
+                            }
+                          });
+                        </script>
+                    </p>
                     <h2 class="section-heading">日経平均株価が4万円を突破した理由に関する考察！</h2>
                     <p>2025年1月7日、日経平均株価がついに4万円の大台を突破しました。この歴史的な上昇の背景には、国内外のさまざまな要因が絡み合っています。
                         本記事では、特に1月6日の下落から1月7日の急上昇に至った理由を中心に考察します。
