@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（01/13～01/19）の★★以上日米経済指標！",
+        subtitle: "相場が不穏な雰囲気の中…",
+        date: "january 13, 2025",
+        link: "../posts/post9.html"
+    },
+    {
         title: "保有中のIonQで爆損！",
         subtitle: "ChatGptにいろいろ聞いてみた",
         date: "january 9, 2025",
