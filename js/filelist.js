@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "良品計画を買いたい！",
+        subtitle: "1/10の決算を確認してみた",
+        date: "january 14, 2025",
+        link: "../posts/post10.html"
+    },
+    {
         title: "（01/13～01/19）の★★以上日米経済指標！",
         subtitle: "相場が不穏な雰囲気の中…",
         date: "january 13, 2025",
