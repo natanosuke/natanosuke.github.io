@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "損切した神戸物産がなぜ急騰？",
+        subtitle: "株価上昇要因を徹底解説！",
+        date: "january 18, 2025",
+        link: "../posts/post11.html"
+    },
+    {
         title: "良品計画を買いたい！",
         subtitle: "1/10の決算を確認してみた",
         date: "january 14, 2025",

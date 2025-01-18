@@ -383,6 +383,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
+  appearance: button; /* 標準仕様 */
   -webkit-appearance: button;
 }
 button:not(:disabled),
@@ -441,6 +442,7 @@ legend + * {
 
 [type=search] {
   outline-offset: -2px;
+  appearance: button; /* 標準仕様 */
   -webkit-appearance: textfield;
 }
 
@@ -462,6 +464,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
+  appearance: button; /* 標準仕様 */
   -webkit-appearance: button;
 }
 
@@ -10854,4 +10857,63 @@ header.masthead .post-heading .meta a {
 }
 .d-none {
   display: none;
+}
+.profile-image {
+    width: 400px; /* 画像の幅を指定 */
+    height: 200px; /* 画像の高さを指定 */
+    object-fit: cover; /* アスペクト比を維持 */
+    margin-right: 20px; /* テキストとの間隔 */
+}
+.fullscreen-preview {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+z-index: 1000;
+justify-content: center;
+align-items: center;
+}
+
+.fullscreen-preview img {
+max-width: 90%;
+max-height: 90%;
+}
+
+.fullscreen-preview:target {
+display: flex;
+}
+/* ボタン全体を揃える */
+.button-group {
+display: flex;
+flex-wrap: wrap; /* 必要に応じて折り返し */
+justify-content: center; /* 全体を中央揃え */
+gap: 0px; /* ボタン間の余白 */
+}
+.black-button {
+display: inline-block;
+padding: 10px 20px;
+color: #ffffff; /* 文字の色を白に設定 */
+background-color: #000000; /* 背景色を黒に設定 */
+text-align: center;
+text-decoration: none; /* テキストの下線を除去 */
+border-radius: 50px; /* 楕円形にするための角丸設定 */
+font-weight: bold; /* 文字を太字に設定 */
+transition: background-color 0.3s ease; /* ホバー時の背景色変更にスムーズな移行を追加 */
+margin: 2px; /* ボタン間の余白を設定 */
+white-space: nowrap; /* テキストを1行に制限 */
+font-size: 16px; /* フォントサイズを調整 */
+}
+.black-button:hover {
+background-color: #333333; /* ホバー時に背景色を少し明るい黒に変更 */
+}
+@media (max-width: 768px) {
+.row {
+flex-direction: column; /* スマホサイズでは列を縦並びに */
+}
+.black-button {
+width: 100%; /* スマホではボタンを横幅いっぱいに */
+}
 }
