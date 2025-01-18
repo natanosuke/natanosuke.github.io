@@ -144,3 +144,87 @@ function displayArticlesForMonth(month, articles) {
 
     container.appendChild(list);
 }
+// サイドバー
+const archiveData = [
+    { year: 2011, profitLoss: "-11,787円" },
+    { year: 2012, profitLoss: "+101,347円" },
+    { year: 2013, profitLoss: "+532,806円" },
+    { year: 2014, profitLoss: "+86,757円" },
+    { year: 2015, profitLoss: "+64,067円" },
+    { year: 2016, profitLoss: "+-0円" },
+    { year: 2017, profitLoss: "+-0円" },
+    { year: 2018, profitLoss: "+-0円" },
+    { year: 2019, profitLoss: "+-0円" },
+    { year: 2020, profitLoss: "+65,268円" },
+    { year: 2021, profitLoss: "+-0円" },
+    { year: 2022, profitLoss: "+31,200円" },
+    { year: 2023, profitLoss: "+-0円" },
+    { year: 2024, profitLoss: "+7,417,155円" }
+];
+// データを年の降順でソート
+archiveData.sort((a, b) => b.year - a.year);
+// 初期表示する行数
+const INITIAL_VISIBLE_COUNT = 5;
+
+// 現在の表示インデックス
+let currentIndex = INITIAL_VISIBLE_COUNT;
+
+// テーブルの tbody 要素を取得
+const archiveTableBody = document.getElementById("archive-table-body");
+
+// 「続きをみる」ボタンを取得
+const loadMoreButton = document.getElementById("load-more");
+
+// 「元に戻す」ボタンを取得
+const resetButton = document.getElementById("reset");
+
+// 初期データを表示
+function renderTable(data, startIndex = 0, count = data.length) {
+    // テーブルをクリア
+    archiveTableBody.innerHTML = "";
+
+    // データを描画
+    for (let i = startIndex; i < startIndex + count && i < data.length; i++) {
+        const entry = data[i];
+        const row = document.createElement("tr");
+
+        // 年のセル
+        const yearCell = document.createElement("td");
+        yearCell.textContent = entry.year;
+
+        // 損益額のセル
+        const profitLossCell = document.createElement("td");
+        profitLossCell.textContent = entry.profitLoss;
+
+        // 行にセルを追加
+        row.appendChild(yearCell);
+        row.appendChild(profitLossCell);
+
+        // テーブルに行を追加
+        archiveTableBody.appendChild(row);
+    }
+}
+
+// 初期表示
+renderTable(archiveData, 0, INITIAL_VISIBLE_COUNT);
+
+// ボタンのクリックイベント
+loadMoreButton.addEventListener("click", () => {
+    // すべてのデータを表示
+    renderTable(archiveData);
+    currentIndex = archiveData.length;
+
+    // ボタンの表示切り替え
+    loadMoreButton.style.display = "none";
+    resetButton.style.display = "block";
+});
+
+resetButton.addEventListener("click", () => {
+    // 初期データに戻す
+    renderTable(archiveData, 0, INITIAL_VISIBLE_COUNT);
+    currentIndex = INITIAL_VISIBLE_COUNT;
+
+    // ボタンの表示切り替え
+    loadMoreButton.style.display = "block";
+    resetButton.style.display = "none";
+});

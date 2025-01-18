@@ -10827,33 +10827,67 @@ header.masthead .post-heading .meta a {
   color: white;
   pointer-events: none; /* 現在のページ番号はクリック不可 */
 }
-.sidebar {
+/* 共通の固定スタイル */
+.sidebar-fixed {
+  position: sticky; /* 固定する */
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 20px;
-  position: sticky; /* スクロール時に固定 */
-  top: 20px;
-  right: 0;
 }
+
+/* 月別アーカイブ */
+#monthly-archive {
+  top: 10px; /* 上部からの固定位置 */
+}
+
+/* 年別損益額 */
+#yearly-profit {
+  top: 200px; /* 年別損益額の固定位置を調整 */
+}
+
+/* 見た目の分離感を強調 */
+.sidebar + .sidebar {
+  margin-top: 30px; /* セクション間のスペースを広げる */
+}
+
+/* タイトルスタイル */
 .sidebar-heading {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+  color: #333;
 }
-.sidebar ul {
-  padding-left: 0;
-  list-style: none;
+
+/* テーブルスタイル */
+.table {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  text-align: center;
 }
-.sidebar ul li {
-  margin-bottom: 0.5rem;
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
-.sidebar ul li a {
-  text-decoration: none;
-  color: #007bff;
-  transition: color 0.3s;
+
+.table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
 }
-.sidebar ul li a:hover {
-  color: #0056b3;
+
+.table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.buttons {
+  display: flex;
+  gap: 10px; /* ボタン間の余白 */
+}
+
+#load-more, #reset {
+  width: 100%;
+  text-align: center;
 }
 .d-none {
   display: none;
