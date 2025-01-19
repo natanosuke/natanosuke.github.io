@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "SBI証券",
+        subtitle: "コスパ最強！IPOもNISAも手数料も業界トップクラスな証券会社",
+        date: "january 20, 2025",
+        link: "../tools/tool5.html"
+        },
+    {
         title: "マネックス証券",
         subtitle: "銘柄スカウターで簡単分析！投資力診断でスキル向上！優れたツールが揃う証券会社",
         date: "january 12, 2025",
