@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（01/20～01/25）の★★以上日米経済指標！",
+        subtitle: "トランプ就任・日銀政策決定会合で波乱？",
+        date: "january 19, 2025",
+        link: "../posts/post12.html"
+    },
+    {
         title: "損切した神戸物産がなぜ急騰？",
         subtitle: "株価上昇要因を徹底解説！",
         date: "january 18, 2025",
