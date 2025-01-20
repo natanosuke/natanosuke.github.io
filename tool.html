@@ -55,11 +55,10 @@
 <div class="container">
   <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-          <!-- 記事リスト -->
-          <div id="articles-container"></div>
-          
-          <!-- Pager -->
-          <div class="clearfix pager-container">
+            <!-- 記事リスト -->
+            <div id="articles-container"></div>      
+            <!-- Pager -->
+            <div class="clearfix pager-container"></div>
             <!-- ページ番号表示用のコンテナ -->
             <div id="page-numbers" class="page-numbers"></div>
             
@@ -67,7 +66,15 @@
             <a class="btn btn-primary float-left pager-link" id="newer-post">← Newer Posts</a>
             <a class="btn btn-primary float-right pager-link" id="older-post">Older Posts →</a>
         </div>
-        
+                <!-- サイドバー（広告専用） -->
+        <div class="col-lg-4 col-md-12">
+            <div class="sidebar bg-light p-4" id="ad-sidebar">
+            <h5 class="sidebar-heading2">おすすめ広告</h5>
+            <!-- 広告記事を挿入 -->
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Footer-->
         <footer class="border-top">
@@ -113,6 +120,6 @@
         <script src="./js/filelisttools.js"></script>
         <script src="./js/article.js"></script>
         <script src="./js/scripts.js"></script>
-        
+        <script src="./js/ads.js"></script>
     </body>
 </html>
