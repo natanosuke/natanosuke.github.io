@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "トランプ相場の次の展開",
+        subtitle: "米国株の方向性と日本株への波及",
+        date: "january 21, 2025",
+        link: "../posts/post13.html"
+    },
+    {
         title: "（01/20～01/25）の★★以上日米経済指標！",
         subtitle: "トランプ就任・日銀政策決定会合で波乱？",
         date: "january 19, 2025",
