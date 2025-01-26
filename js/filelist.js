@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（01/27～02/02）の★★以上日米経済指標！",
+        subtitle: "決算シーズンにつき要注意",
+        date: "january 26, 2025",
+        link: "../posts/post14.html"
+    },
+    {
         title: "トランプ相場の次の展開",
         subtitle: "米国株の方向性と日本株への波及",
         date: "january 21, 2025",
