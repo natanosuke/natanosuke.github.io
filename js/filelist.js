@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "フジメディアHDは買い？",
+        subtitle: "注目すべきポイントとリスク",
+        date: "january 29, 2025",
+        link: "../posts/post15.html"
+    },
+    {
         title: "（01/27～02/02）の★★以上日米経済指標！",
         subtitle: "決算シーズンにつき要注意",
         date: "january 26, 2025",
