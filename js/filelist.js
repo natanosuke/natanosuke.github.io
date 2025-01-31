@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "M&A総研、崖っぷち決算！",
+        subtitle: "塩漬け投資家（私）の地獄絵図シナリオ",
+        date: "january 31, 2025",
+        link: "../posts/post16.html"
+    },
+    {
         title: "フジメディアHDは買い？",
         subtitle: "注目すべきポイントとリスク",
         date: "january 29, 2025",
