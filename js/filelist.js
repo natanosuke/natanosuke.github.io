@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（02/3～02/9）の★★以上日米経済指標！",
+        subtitle: "好決算継続？",
+        date: "February 1, 2025",
+        link: "../posts/post17.html"
+    },
+    {
         title: "M&A総研、崖っぷち決算！",
         subtitle: "塩漬け投資家（私）の地獄絵図シナリオ",
         date: "january 31, 2025",
