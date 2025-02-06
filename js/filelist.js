@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "メガバンクの株価はどう動く？",
+        subtitle: "決算から見る投資判断のポイント",
+        date: "February 6, 2025",
+        link: "../posts/post18.html"
+    },
+    {
         title: "（02/3～02/9）の★★以上日米経済指標！",
         subtitle: "好決算継続？",
         date: "February 1, 2025",
