@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 月と記事数を表示
                 const articleCount = groupedArchives[year][month].length;
-                monthLink.textContent = `${month}月 (${articleCount})`;
+                monthLink.textContent = `>${month}月 (${articleCount})`;
                 monthLink.href = "#";
                 monthLink.addEventListener("click", () => {
                     displayArticlesForMonth(`${year}年${month}月`, groupedArchives[year][month]);

@@ -54,49 +54,48 @@
         </header>
 <!-- Main Content-->
 <div class="container">
-    <div class="row justify-content-center">
-        <!-- メインコンテンツ -->
-        <div class="col-lg-8 col-md-10">
-            <!-- 記事リストがここに表示される -->
-            <div id="articles-container"></div>
-
-            <!-- ページャーボタン -->
-            <a class="btn btn-primary float-left" href="post.html">View All Posts</a>
+    <div class="row flex-column flex-lg-row">
+      <!-- メインコンテンツ：モバイルでは order-1、デスクトップでは order-lg-2 -->
+      <div class="col-lg-6 col-md-6 order-1 order-lg-2" id="main-content">
+        <div id="articles-container"></div>
+        <a class="btn btn-primary float-left" href="post.html">View All Posts</a>
+      </div>
+  
+      <!-- 左サイドバー（年別確定損益額）：モバイルでは order-2、デスクトップでは order-lg-1 -->
+      <div class="col-lg-3 col-md-3 order-2 order-lg-1" id="left-sidebar">
+        <div class="sidebar bg-light p-3 sidebar-fixed" id="yearly-profit">
+          <h5 class="sidebar-heading">年別確定損益額</h5>
+          <table class="table table-bordered" id="archive-table">
+            <thead>
+              <tr>
+                <th>年</th>
+                <th>損益額</th>
+              </tr>
+            </thead>
+            <tbody id="archive-table-body">
+              <!-- JavaScriptで動的に行を追加 -->
+            </tbody>
+          </table>
+          <div class="buttons mt-3">
+            <button id="load-more" class="btn btn-primary">続きをみる</button>
+            <button id="reset" class="btn btn-secondary" style="display: none;">元に戻す</button>
+          </div>
         </div>
-        <!-- サイドバー -->
-        <div class="col-lg-4 col-md-4">
-            <!-- 月別アーカイブ -->
-            <div class="sidebar bg-light p-3 sidebar-fixed" id="monthly-archive">
-                <h5 class="sidebar-heading">月別アーカイブ</h5>
-                <ul class="list-unstyled" id="archive-list">
-                    <!-- JavaScriptで動的にリストを生成 -->
-                </ul>
-            </div>
-
-                <!-- 年別損益額 -->
-                <div class="sidebar bg-light p-3 sidebar-fixed mt-5" id="yearly-profit">
-                    <h5 class="sidebar-heading">年別確定損益額</h5>
-                    <table class="table table-bordered" id="archive-table">
-                        <thead>
-                            <tr>
-                                <th>年</th>
-                                <th>損益額</th>
-                            </tr>
-                        </thead>
-                        <tbody id="archive-table-body">
-                            <!-- JavaScriptで動的に行を追加 -->
-                        </tbody>
-                    </table>
-                    <div class="buttons mt-3">
-                        <button id="load-more" class="btn btn-primary">続きをみる</button>
-                        <button id="reset" class="btn btn-secondary" style="display: none;">元に戻す</button>
-                    </div>
-                </div>
-            </div>
+      </div>
+  
+      <!-- 右サイドバー（月別アーカイブ）：モバイルでは order-3、デスクトップでは order-lg-3 -->
+      <div class="col-lg-3 col-md-3 order-3 order-lg-3" id="right-sidebar">
+        <div class="sidebar bg-light p-3 sidebar-fixed" id="monthly-archive">
+          <h5 class="sidebar-heading">月別アーカイブ</h5>
+          <ul class="list-unstyled" id="archive-list">
+            <!-- JavaScriptで動的にリスト生成 -->
+          </ul>
         </div>
+      </div>
     </div>
-</div>
-
+  </div>
+  
+  
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">

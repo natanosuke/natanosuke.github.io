@@ -10839,12 +10839,12 @@ header.masthead .post-heading .meta a {
 
 /* 月別アーカイブ */
 #monthly-archive {
-  top: 10px; /* 上部からの固定位置 */
+  top: 20px; /* 上部からの固定位置 */
 }
 
 /* 年別損益額 */
 #yearly-profit {
-  top: 200px; /* 年別損益額の固定位置を調整 */
+  top: 20px; /* 年別損益額の固定位置を調整 */
 }
 
 /* 見た目の分離感を強調 */
@@ -10950,4 +10950,21 @@ flex-direction: column; /* スマホサイズでは列を縦並びに */
 .black-button {
 width: 100%; /* スマホではボタンを横幅いっぱいに */
 }
+}
+@media (max-width: 768px) {
+  /* モバイル版でメニュータブを画面上部に固定 */
+  #mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;  /* 他の要素より前面に表示 */
+    background-color: #fff;  /* お好みに合わせて背景色を設定 */
+    transition: top 0.3s;  /* スムーズな表示切替を追加（任意） */
+  }
+
+  /* メニュータブの高さ分、下のコンテンツが隠れないように余白を確保 */
+  body {
+    padding-top: 70px;  /* #mainNav の高さに合わせて調整 */
+  }
 }
