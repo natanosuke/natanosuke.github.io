@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "１月末時点の資産残高と収支報告",
+        subtitle: "アッパーマス層突入！",
+        date: "February 8, 2025",
+        link: "../posts/post19.html"
+    },
+    {
         title: "メガバンクの株価はどう動く？",
         subtitle: "決算から見る投資判断のポイント",
         date: "February 6, 2025",
