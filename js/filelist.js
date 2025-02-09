@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "（02/10～02/16）の★★以上日米経済指標！",
+        subtitle: "トランプ大統領の影響で円高加速？",
+        date: "February 9, 2025",
+        link: "../posts/post20.html"
+    },
+    {
         title: "１月末時点の資産残高と収支報告",
         subtitle: "アッパーマス層突入！",
         date: "February 8, 2025",
