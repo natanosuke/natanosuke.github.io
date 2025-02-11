@@ -10983,8 +10983,3 @@ width: 100%; /* スマホではボタンを横幅いっぱいに */
   top: 0; /* サイドバーの上端に揃える */
   width: 200px;
 }
-
-/* ヘッダー内の広告を非表示 */
-header ins.adsbygoogle {
-  display: none !important;
-}
