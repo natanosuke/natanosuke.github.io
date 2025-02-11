@@ -10968,3 +10968,14 @@ width: 100%; /* スマホではボタンを横幅いっぱいに */
     padding-top: 70px;  /* #mainNav の高さに合わせて調整 */
   }
 }
+/* サイドバー広告の固定配置 */
+#ad-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ad-sidebar .ads-container {
+    width: 100%;
+    margin-bottom: 20px; /* 下のコンテンツと余白を確保 */
+}
