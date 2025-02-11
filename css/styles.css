@@ -10866,13 +10866,19 @@ header.masthead .post-heading .meta a {
   font-size: 0.9rem;
   text-align: center;
 }
-
-.table th, .table td {
+/* 左端揃えのテーブル */
+.left-table {
+  margin-bottom: 0;
+  margin-left: 0; /* 左端に配置 */
+  text-align: left; /* テキスト左揃え */
+  font-size: 0.9rem;
+}
+.table th, .table td, .left-table th, .left-table td {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.table th {
+.table th, .left-table th {
   background-color: #f1f1f1;
   font-weight: bold;
 }
@@ -10880,6 +10886,11 @@ header.masthead .post-heading .meta a {
 .table tr:nth-child(even) {
   background-color: #fafafa;
 }
+
+.left-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
 .buttons {
   display: flex;
   gap: 10px; /* ボタン間の余白 */
@@ -10967,4 +10978,7 @@ width: 100%; /* スマホではボタンを横幅いっぱいに */
   body {
     padding-top: 70px;  /* #mainNav の高さに合わせて調整 */
   }
+}
+.no-wrap {
+  white-space: nowrap;
 }

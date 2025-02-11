@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const articlesPerPage = 6; // 1ページに表示する記事数
     const totalPages = Math.ceil(articles.length / articlesPerPage); // 総ページ数
-    let currentPage = 0; // 現在のページ（0始まり）
+
+    // セッションストレージから現在のページ番号を取得（なければ0）
+    let currentPage = sessionStorage.getItem("currentPage")
+        ? parseInt(sessionStorage.getItem("currentPage"), 10)
+        : 0;
 
     // 現在のページに基づいて記事を表示
     function displayArticles(page) {
@@ -67,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
         displayArticles(currentPage);
         renderPageNumbers();
         updatePagerLinks();
+        // 現在のページ番号をセッションストレージに保存
+        sessionStorage.setItem("currentPage", currentPage);
     }
 
     // イベントリスナー

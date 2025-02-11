@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "金の投資ってどうやるの？",
+        subtitle: "値上がり凄いから調べてました！",
+        date: "February 11, 2025",
+        link: "../posts/post21.html"
+    },
+    {
         title: "（02/10～02/16）の★★以上日米経済指標！",
         subtitle: "トランプ大統領の影響で円高加速？",
         date: "February 9, 2025",
