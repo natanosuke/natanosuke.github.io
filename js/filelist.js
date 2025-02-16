@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "SOFI急騰！",
+        subtitle: "未来へのゴールデンチケットなのか？",
+        date: "February 16, 2025",
+        link: "../posts/post22.html"
+    },
+    {
         title: "金の投資ってどうやるの？",
         subtitle: "値上がり凄いから調べてました！",
         date: "February 11, 2025",
