@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "米国グロース株の急落は調整か？",
+        subtitle: "HIMSにインしました",
+        date: "February 23, 2025",
+        link: "../posts/post23.html"
+    },
+    {
         title: "SOFI急騰！",
         subtitle: "未来へのゴールデンチケットなのか？",
         date: "February 16, 2025",
