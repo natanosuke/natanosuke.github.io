@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "経済指標が市場を揺るがす理由とは？",
+        subtitle: "投資家が見るべきデータ5選",
+        date: "February 28, 2025",
+        link: "../posts/post24.html"
+    },
+    {
         title: "米国グロース株の急落は調整か？",
         subtitle: "HIMSにインしました",
         date: "February 23, 2025",
