@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "２月末時点の資産残高と収支報告",
+        subtitle: "はかない夢…マス層に陥落",
+        date: "March 1, 2025",
+        link: "../posts/post25.html"
+    },
+    {
         title: "経済指標が市場を揺るがす理由とは？",
         subtitle: "投資家が見るべきデータ5選",
         date: "February 28, 2025",

@@ -2,9 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const adCode = `
       <hr><a><b>PR用</b></a><div class="ad-container" style="margin: 20px 0; text-align: center;">
-      <a href="https://px.a8.net/svt/ejp?a8mat=3ZMEYE+3VBGC2+3XCC+6EER5" rel="nofollow">
-      <img border="0" width="280" height="50" alt="" src="https://www24.a8.net/svt/bgt?aid=241230902234&wid=001&eno=01&mid=s00000018318001075000&mc=1"></a>
-      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=3ZMEYE+3VBGC2+3XCC+6EER5" alt="">
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100p8ju00o8yg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100p8ju00o8yg" alt="マネックス証券" border="0" /></a>
       </div>
     `;
   
