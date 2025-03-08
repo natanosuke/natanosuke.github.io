@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "トランプ劇場で投資家悲観？",
+        subtitle: "ここで強気の買い増し！",
+        date: "March 8, 2025",
+        link: "../posts/post26.html"
+    },
+    {
         title: "２月末時点の資産残高と収支報告",
         subtitle: "はかない夢…マス層に陥落",
         date: "March 1, 2025",
