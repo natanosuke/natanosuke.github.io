@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "米国株が反転上昇！底打ちか、一時的な反発か？",
+        subtitle: "注目すべき３つの指標",
+        date: "March 16, 2025",
+        link: "../posts/post27.html"
+    },
+    {
         title: "トランプ劇場で投資家悲観？",
         subtitle: "ここで強気の買い増し！",
         date: "March 8, 2025",

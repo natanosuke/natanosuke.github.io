@@ -160,7 +160,7 @@ const archiveData = [
     { year: 2022, profitLoss: "+31,200円" },
     { year: 2023, profitLoss: "+-0円" },
     { year: 2024, profitLoss: "+7,417,155円" },
-    { year: 2025, profitLoss: "-68,800円" }
+    { year: 2025, profitLoss: "+101,993円" }
 ];
 // データを年の降順でソート
 archiveData.sort((a, b) => b.year - a.year);
