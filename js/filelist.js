@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "2025年も円安が止まらない？",
+        subtitle: "日米金利差が縮小しても円安の理由",
+        date: "March 25, 2025",
+        link: "../posts/post28.html"
+    },
+    {
         title: "米国株が反転上昇！底打ちか、一時的な反発か？",
         subtitle: "注目すべき３つの指標",
         date: "March 16, 2025",
