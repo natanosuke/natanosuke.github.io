@@ -1,5 +1,11 @@
 const articles = [
     {
+        title: "３月末時点の資産残高と収支報告",
+        subtitle: "暴落に抗え！",
+        date: "April 6, 2025",
+        link: "../posts/post29.html"
+    },
+    {
         title: "2025年も円安が止まらない？",
         subtitle: "日米金利差が縮小しても円安の理由",
         date: "March 25, 2025",
