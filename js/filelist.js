@@ -2,8 +2,8 @@ const articles = [
     {
         title: "４月末時点の資産残高と収支報告",
         subtitle: "反発！",
-        date: "April 6, 2025",
-        link: "../posts/post29.html"
+        date: "May 4, 2025",
+        link: "../posts/post30.html"
     },
     {
         title: "３月末時点の資産残高と収支報告",
