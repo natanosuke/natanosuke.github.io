@@ -229,3 +229,102 @@ resetButton.addEventListener("click", () => {
     loadMoreButton.style.display = "block";
     resetButton.style.display = "none";
 });
+let currentPage = 1;
+const itemsPerPage = 24;
+let currentArticles = [];
+
+document.addEventListener("DOMContentLoaded", function () {
+    const assetLink = document.querySelector(".asset-link");
+    assetLink.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        currentArticles = articles
+            .filter(article => article.category === "資産残高と収支報告")
+            .sort((a, b) => new Date(b.date) - new Date(a.date)); // 新しい順
+
+        currentPage = 1;
+        renderAssetArticlesPage();
+    });
+});
+
+function renderAssetArticlesPage() {
+    const container = document.getElementById("articles-container");
+    container.innerHTML = ""; // 一覧とボタン等すべてリセット
+
+    // ヘッダー
+    const header = document.createElement("h3");
+    header.textContent = "資産残高と収支報告の一覧";
+    container.appendChild(header);
+
+    // 記事リスト
+    const list = document.createElement("ul");
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageItems = currentArticles.slice(start, end);
+
+    pageItems.forEach(article => {
+        const listItem = document.createElement("li");
+
+        const date = new Date(article.date);
+        const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
+
+        const dateSpan = document.createElement("span");
+        dateSpan.textContent = `${formattedDate} `;
+        dateSpan.style.fontWeight = "bold";
+
+        const link = document.createElement("a");
+        link.href = article.link;
+        link.textContent = article.title;
+
+        listItem.appendChild(dateSpan);
+        listItem.appendChild(link);
+        list.appendChild(listItem);
+    });
+
+    container.appendChild(list);
+
+    // ページャー
+    const pager = document.createElement("div");
+    pager.className = "clearfix mt-4";
+
+    if (currentPage > 1) {
+        const newer = document.createElement("a");
+        newer.href = "#";
+        newer.className = "btn btn-primary float-left pager-link";
+        newer.textContent = "← Newer Posts";
+        newer.addEventListener("click", function (e) {
+            e.preventDefault();
+            currentPage--;
+            renderAssetArticlesPage();
+        });
+        pager.appendChild(newer);
+    }
+
+    if (currentPage * itemsPerPage < currentArticles.length) {
+        const older = document.createElement("a");
+        older.href = "#";
+        older.className = "btn btn-primary float-right pager-link";
+        older.textContent = "Older Posts →";
+        older.addEventListener("click", function (e) {
+            e.preventDefault();
+            currentPage++;
+            renderAssetArticlesPage();
+        });
+        pager.appendChild(older);
+    }
+
+    container.appendChild(pager);
+
+    // View All Posts ボタンを非表示にする
+    const viewAllButton = document.querySelector(".view-all-posts-btn");
+    if (viewAllButton) {
+        viewAllButton.style.display = "none";
+    }
+
+    // 「戻る」ボタン追加（index.htmlへリンク）
+    const backButton = document.createElement("a");
+    backButton.href = "index.html";
+    backButton.className = "btn btn-secondary d-block mx-auto mt-4";
+    backButton.textContent = "戻る";
+    container.appendChild(backButton);
+}

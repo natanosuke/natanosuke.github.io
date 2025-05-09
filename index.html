@@ -58,7 +58,7 @@
       <!-- メインコンテンツ：モバイルでは order-1、デスクトップでは order-lg-2 -->
       <div class="col-lg-6 col-md-6 order-1 order-lg-2" id="main-content">
         <div id="articles-container"></div>
-        <a class="btn btn-primary float-left" href="post.html">View All Posts</a>
+        <a class="btn btn-primary view-all-posts-btn" href="post.html">View All Posts</a>
       </div>
       <!-- 左サイドバー（年別確定損益額）：モバイルでは order-2、デスクトップでは order-lg-1 -->
       <div class="col-lg-3 col-md-3 order-2 order-lg-1" id="left-sidebar">
@@ -72,7 +72,7 @@
               </tr>
             </thead>
             <tbody id="archive-table-body">
-              <!-- JavaScriptで動的に行を追加 -->
+      <!-- JavaScriptで動的に行を追加 -->
             </tbody>
           </table>
           <div class="buttons mt-3">
@@ -80,8 +80,15 @@
             <button id="reset" class="btn btn-secondary" style="display: none;">元に戻す</button>
           </div>
         </div>
+      <!-- 左サイドバー(カテゴリ) -->
+          <div class="sidebar bg-light p-3">
+          <h5 class="sidebar-heading">カテゴリ</h5>
+          <ul class="list-unstyled">
+              <li><a href="#" class="asset-link">資産残高と収支報告</a></li>
+          </ul>
+          </div>
       </div>
-      
+
       <!-- 右サイドバー（月別アーカイブ）：モバイルでは order-3、デスクトップでは order-lg-3 -->
       <div class="col-lg-3 col-md-3 order-3 order-lg-3" id="right-sidebar">
         <div class="sidebar bg-light p-3 sidebar-fixed" id="monthly-archive">
