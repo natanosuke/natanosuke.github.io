@@ -1,4 +1,11 @@
 const articles = [
+        {
+        title: "５月末時点の資産残高と収支報告",
+        subtitle: "アッパーマス帰還！",
+        date: "June 1, 2025",
+        link: "../posts/post32.html",
+        category: "資産残高と収支報告"
+    },
     {
         title: "SoFi、予想以上の第１四半期業績を記録！",
         subtitle: "Galileoの鈍化懸念を超える成長の全体像",
