@@ -1,4 +1,11 @@
 const articles = [
+    {
+        title: "米国株の快進撃！資産大幅下落からの大回復",
+        subtitle: "上昇理由と今後の戦略を語る",
+        date: "June 7, 2025",
+        link: "../posts/post33.html",
+        category: ""
+    },
         {
         title: "５月末時点の資産残高と収支報告",
         subtitle: "アッパーマス帰還！",
