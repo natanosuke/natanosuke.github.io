@@ -10982,3 +10982,6 @@ width: 100%; /* スマホではボタンを横幅いっぱいに */
 .no-wrap {
   white-space: nowrap;
 }
+span {
+  margin-left: 1rem;
+}
