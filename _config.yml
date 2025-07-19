@@ -1,3 +1,5 @@
 google_analytics: G-M7K143JV44
+theme:
+url: "https://natanosuke.github.io/"
 plugins:
   - jekyll-sitemap
