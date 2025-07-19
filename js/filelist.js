@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: "7月第3週 売買記録",
+        subtitle: "OSCR追加購入",
+        date: "July 19, 2025",
+        link: "../posts/post36.html",
+        category: ""
+    },
+    {
         title: "7月第2週 売買記録",
         subtitle: "APP誤発注と資金シフト戦略",
         date: "July 15, 2025",
