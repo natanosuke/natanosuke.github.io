@@ -1,27 +1,34 @@
 const articles = [
         {
-        title: "7月第5週8月第1週 売買記録",
+        title: "７月末時点の資産残高と収支報告",
+        subtitle: "資産の増加が加速！",
+        date: "August 2, 2025",
+        link: "../posts/post39.html",
+        category: "資産残高と収支報告"
+    },
+        {
+        title: "７月第５週８月第１週 売買記録",
         subtitle: "右往左往",
         date: "August 2, 2025",
         link: "../posts/post38.html",
         category: ""
     },
     {
-        title: "7月第4週 売買記録",
+        title: "７月第４週 売買記録",
         subtitle: "SOFI売却",
         date: "July 26, 2025",
         link: "../posts/post37.html",
         category: ""
     },
     {
-        title: "7月第3週 売買記録",
+        title: "７月第２週 売買記録",
         subtitle: "OSCR追加購入",
         date: "July 19, 2025",
         link: "../posts/post36.html",
         category: ""
     },
     {
-        title: "7月第2週 売買記録",
+        title: "７月第２週 売買記録",
         subtitle: "APP誤発注と資金シフト戦略",
         date: "July 15, 2025",
         link: "../posts/post35.html",
