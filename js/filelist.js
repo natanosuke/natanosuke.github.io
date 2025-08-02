@@ -1,4 +1,11 @@
 const articles = [
+        {
+        title: "7月第5週8月第1週 売買記録",
+        subtitle: "右往左往",
+        date: "August 2, 2025",
+        link: "../posts/post38.html",
+        category: ""
+    },
     {
         title: "7月第4週 売買記録",
         subtitle: "SOFI売却",
