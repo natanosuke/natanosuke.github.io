@@ -1,4 +1,11 @@
 const articles = [
+    {
+        title: "８月第２週 売買記録",
+        subtitle: "決算勝ち",
+        date: "August 9, 2025",
+        link: "../posts/post40.html",
+        category: ""
+    },
         {
         title: "７月末時点の資産残高と収支報告",
         subtitle: "資産の増加が加速！",
@@ -21,7 +28,7 @@ const articles = [
         category: ""
     },
     {
-        title: "７月第２週 売買記録",
+        title: "７月第３週 売買記録",
         subtitle: "OSCR追加購入",
         date: "July 19, 2025",
         link: "../posts/post36.html",
