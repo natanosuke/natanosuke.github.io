@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: "８月第４週 売買記録",
+        subtitle: "上げ来た！",
+        date: "August 25, 2025",
+        link: "../posts/post42.html",
+        category: ""
+    },
+    {
         title: "８月第３週 売買記録",
         subtitle: "利下げ期待",
         date: "August 15, 2025",
