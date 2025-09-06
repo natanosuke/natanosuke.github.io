@@ -1,5 +1,19 @@
 const articles = [
     {
+        title: "８月末時点の資産残高と収支報告",
+        subtitle: "資産の増加が加速！",
+        date: "September 6, 2025",
+        link: "../posts/post44.html",
+        category: "資産残高と収支報告"
+    },
+    {
+        title: "８月第５週、９月第１週 売買記録",
+        subtitle: "狙った取引できた！",
+        date: "September 6, 2025",
+        link: "../posts/post43.html",
+        category: ""
+    },
+    {
         title: "８月第４週 売買記録",
         subtitle: "上げ来た！",
         date: "August 25, 2025",
