@@ -1,12 +1,19 @@
 const articles = [
-        {
+    {
+        title: "９月第４週 売買記録",
+        subtitle: "狙った取引できた！",
+        date: "September 28, 2025",
+        link: "../posts/post47.html",
+        category: ""
+    },
+    {
         title: "９月第３週 売買記録",
         subtitle: "狙った取引できた！",
         date: "September 21, 2025",
         link: "../posts/post46.html",
         category: ""
     },
-        {
+    {
         title: "９月第２週 売買記録",
         subtitle: "稲妻が走った！",
         date: "September 15, 2025",
