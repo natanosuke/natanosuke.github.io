@@ -1,7 +1,7 @@
 const articles = [
     {
         title: "９月第４週 売買記録",
-        subtitle: "狙った取引できた！",
+        subtitle: "購入早かった…",
         date: "September 28, 2025",
         link: "../posts/post47.html",
         category: ""
