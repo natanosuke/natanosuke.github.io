@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: "5月末時点の資産残高と収支報告",
+        subtitle: "株高の勢いすごい！準富裕層に到達！",
+        date: "June 6, 2026",
+        link: "../posts/post56.html",
+        category: "資産残高と収支報告"
+    },
+    {
         title: "4月末時点の資産残高と収支報告",
         subtitle: "ここからさらに…",
         date: "May 16, 2026",
