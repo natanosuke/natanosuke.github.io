@@ -149,7 +149,7 @@ const archiveData = [
     { year: 2011, profitLoss: "-11,787円" },
     { year: 2012, profitLoss: "+101,347円" },
     { year: 2013, profitLoss: "+532,806円" },
-    { year: 2014, profitLoss: "+86,757円" },
+    { year: 2014, profitLoss: "+86,757円"},
     { year: 2015, profitLoss: "+64,067円" },
     { year: 2016, profitLoss: "+-0円" },
     { year: 2017, profitLoss: "+-0円" },
@@ -163,102 +163,177 @@ const archiveData = [
     { year: 2025, profitLoss: "+4,694,666円" },
     { year: 2026, profitLoss: "+6,121,584円" }
 ];
+
 // データを年の降順でソート
 archiveData.sort((a, b) => b.year - a.year);
+
 // 初期表示する行数
 const INITIAL_VISIBLE_COUNT = 5;
-
-// 現在の表示インデックス
 let currentIndex = INITIAL_VISIBLE_COUNT;
 
-// テーブルの tbody 要素を取得
 const archiveTableBody = document.getElementById("archive-table-body");
-
-// 「続きをみる」ボタンを取得
 const loadMoreButton = document.getElementById("load-more");
-
-// 「元に戻す」ボタンを取得
 const resetButton = document.getElementById("reset");
 
-// 初期データを表示
 function renderTable(data, startIndex = 0, count = data.length) {
-    // テーブルをクリア
     archiveTableBody.innerHTML = "";
 
-    // データを描画
     for (let i = startIndex; i < startIndex + count && i < data.length; i++) {
         const entry = data[i];
         const row = document.createElement("tr");
 
-        // 年のセル
         const yearCell = document.createElement("td");
         yearCell.textContent = entry.year;
 
-        // 損益額のセル
         const profitLossCell = document.createElement("td");
         profitLossCell.textContent = entry.profitLoss;
 
-        // 行にセルを追加
         row.appendChild(yearCell);
         row.appendChild(profitLossCell);
 
-        // テーブルに行を追加
         archiveTableBody.appendChild(row);
     }
 }
 
-// 初期表示
 renderTable(archiveData, 0, INITIAL_VISIBLE_COUNT);
 
-// ボタンのクリックイベント
 loadMoreButton.addEventListener("click", () => {
-    // すべてのデータを表示
     renderTable(archiveData);
     currentIndex = archiveData.length;
 
-    // ボタンの表示切り替え
     loadMoreButton.style.display = "none";
     resetButton.style.display = "block";
 });
 
 resetButton.addEventListener("click", () => {
-    // 初期データに戻す
     renderTable(archiveData, 0, INITIAL_VISIBLE_COUNT);
     currentIndex = INITIAL_VISIBLE_COUNT;
 
-    // ボタンの表示切り替え
     loadMoreButton.style.display = "block";
     resetButton.style.display = "none";
 });
+
 let currentPage = 1;
 const itemsPerPage = 24;
 let currentArticles = [];
 
 document.addEventListener("DOMContentLoaded", function () {
     const assetLink = document.querySelector(".asset-link");
+
+    if (!assetLink) return;
+
     assetLink.addEventListener("click", function (e) {
         e.preventDefault();
 
         currentArticles = articles
             .filter(article => article.category === "資産残高と収支報告")
-            .sort((a, b) => new Date(b.date) - new Date(a.date)); // 新しい順
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
 
         currentPage = 1;
         renderAssetArticlesPage();
     });
 });
 
+function renderAssetBalanceChart(container) {
+    const chartWrapper = document.createElement("div");
+    chartWrapper.className = "mt-5 mb-4";
+
+    const chartTitle = document.createElement("h4");
+    chartTitle.textContent = "月別資産残高の推移";
+    chartWrapper.appendChild(chartTitle);
+
+    const canvas = document.createElement("canvas");
+    chartWrapper.appendChild(canvas);
+
+    container.appendChild(chartWrapper);
+
+    const chartData = [...monthlyAssetData].sort((a, b) => {
+        return new Date(a.date + "-01") - new Date(b.date + "-01");
+    });
+
+    // 横軸は年ごとに表示
+    const labels = chartData.map(item => {
+        const [year, month] = item.date.split("-");
+        return month === "01" ? `${year}年` : "";
+    });
+
+    const values = chartData.map(item => item.assetBalance);
+
+    new Chart(canvas, {
+        type: "line",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "資産残高",
+                data: values,
+                tension: 0.3,
+                fill: false,
+
+                // 月ごとの●
+                pointRadius: 4,
+                pointHoverRadius: 8,
+                pointHitRadius: 15
+            }]
+        },
+        options: {
+            responsive: true,
+
+            interaction: {
+                mode: "nearest",
+                intersect: true
+            },
+
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function (context) {
+                            const index = context[0].dataIndex;
+                            const [year, month] = chartData[index].date.split("-");
+                            return `${year}年${month}月`;
+                        },
+                        label: function (context) {
+                            return `資産額: ${context.raw.toLocaleString()}円`;
+                        }
+                    }
+                }
+            },
+
+            scales: {
+                x: {
+                    grid: {
+                        color: function (context) {
+                            const label = labels[context.index];
+
+                            // 年ラベルがある場所だけ縦線を表示
+                            return label !== ""
+                                ? "rgba(0, 0, 0, 0.15)"
+                                : "rgba(0, 0, 0, 0)";
+                        }
+                    }
+                },
+
+                y: {
+                    ticks: {
+                        stepSize: 10000000,
+                        callback: function (value) {
+                            return `${value / 10000}万円`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
 function renderAssetArticlesPage() {
     const container = document.getElementById("articles-container");
-    container.innerHTML = ""; // 一覧とボタン等すべてリセット
+    container.innerHTML = "";
 
-    // ヘッダー
     const header = document.createElement("h3");
     header.textContent = "資産残高と収支報告の一覧";
     container.appendChild(header);
 
-    // 記事リスト
     const list = document.createElement("ul");
+
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const pageItems = currentArticles.slice(start, end);
@@ -267,7 +342,8 @@ function renderAssetArticlesPage() {
         const listItem = document.createElement("li");
 
         const date = new Date(article.date);
-        const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
+        const formattedDate =
+            `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, "0")}/${String(date.getDate()).padStart(2, "0")}`;
 
         const dateSpan = document.createElement("span");
         dateSpan.textContent = `${formattedDate} `;
@@ -284,7 +360,6 @@ function renderAssetArticlesPage() {
 
     container.appendChild(list);
 
-    // ページャー
     const pager = document.createElement("div");
     pager.className = "clearfix mt-4";
 
@@ -316,13 +391,14 @@ function renderAssetArticlesPage() {
 
     container.appendChild(pager);
 
-    // View All Posts ボタンを非表示にする
     const viewAllButton = document.querySelector(".view-all-posts-btn");
     if (viewAllButton) {
         viewAllButton.style.display = "none";
     }
 
-    // 「戻る」ボタン追加（index.htmlへリンク）
+    // グラフを戻るボタンの上に表示
+    renderAssetBalanceChart(container);
+
     const backButton = document.createElement("a");
     backButton.href = "index.html";
     backButton.className = "btn btn-secondary d-block mx-auto mt-4";
