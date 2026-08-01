@@ -161,7 +161,7 @@ const archiveData = [
     { year: 2023, profitLoss: "+-0円" },
     { year: 2024, profitLoss: "+7,417,155円" },
     { year: 2025, profitLoss: "+4,694,666円" },
-    { year: 2026, profitLoss: "+7,110,397円" }
+    { year: 2026, profitLoss: "+6,435,248円" }
 ];
 
 // データを年の降順でソート
