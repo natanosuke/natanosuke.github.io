@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: "8月末時点の資産残高と収支報告",
+        subtitle: "資産最高値更新からの振れ幅！",
+        date: "september 5, 2026",
+        link: "../posts/post59.html",
+        category: "資産残高と収支報告"
+    },
+    {
         title: "7月末時点の資産残高と収支報告",
         subtitle: "厳しい調整の日々",
         date: "August 1, 2026",
