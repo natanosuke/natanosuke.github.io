@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: "9月末時点の資産残高と収支報告",
+        subtitle: "上手くいかない、我慢の時！",
+        date: "october 4, 2026",
+        link: "../posts/post60.html",
+        category: "資産残高と収支報告"
+    },
+    {
         title: "8月末時点の資産残高と収支報告",
         subtitle: "資産最高値更新からの振れ幅！",
         date: "september 5, 2026",

@@ -79,5 +79,5 @@ const monthlyAssetData = [
     { date: "2026-06", assetBalance: 67030599 },
     { date: "2026-07", assetBalance: 56532041 },
     { date: "2026-08", assetBalance: 62204513 },
-    { date: "2026-09", assetBalance: 64415927 }
+    { date: "2026-09", assetBalance: 65269081 }
 ];
